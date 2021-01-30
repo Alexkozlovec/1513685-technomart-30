@@ -111,8 +111,8 @@
   --color-text-blue: #32425c;
   --color-text-lightgray: #a9a9a9;
 
-  --color-section-header-bg: #f9f5f0;
   --color-darkred: #ca2c37;
+  --color-extra-darkred: #ba2732;
   --color-darkgreen: #518534;
   --color-extra-darkgreen: #367315;
   --color-extra-darkblue: #1d2739;
@@ -120,7 +120,13 @@
   --color-border-gray: #eaeaea;
   --color-social-bg: #212a3a;
   --color-dark: #161d29;
+  --color-section-header-bg: #f9f5f0;
   --color-modal-button-bg: #f4f4f4;
+
+  /* fonts */
+
+  --font-primary: "Cuprum", "Arial", sans-serif;
+  --font-secondary: "PT Sans", "Trebuchet MS", sans-serif;
 }
 
 /* global styles */
@@ -138,7 +144,7 @@
 
 .page-body {
   min-width: 1200px;
-  font-family: "Cuprum", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -165,7 +171,7 @@ input {
 }
 
 .logo:active {
-  background-color: var(--color-error);
+  background-color: var(--color-extra-darkred);
 }
 
 .marker-new {
@@ -193,13 +199,20 @@ input {
   color: var(--color-text-blue);
 }
 
+.section-desc {
+  margin: 0;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  line-height: 24px;
+}
+
 /* buttons */
 
 .btn {
   vertical-align: middle;
   border: none;
   padding: 0;
-  font-family: "Cuprum", sans-serif;
+  font-family: var(--font-primary);
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -264,7 +277,7 @@ input {
   opacity: 0.5;
 }
 
-.btn--tabs {
+.btn-tabs {
   font-size: 21px;
   line-height: 30px;
   text-transform: none;
@@ -272,12 +285,12 @@ input {
   background-color: var(--color-text-blue);
 }
 
-.btn--tabs--current {
+.btn-tabs--current {
   color: var(--color-text-blue);
   background-color: var(--color-white);
 }
 
-.btn--tabs:hover {
+.btn-tabs:hover {
   color: var(--color-white);
   background-color: var(--color-basic-darkblue);
 }
@@ -479,7 +492,7 @@ input {
 
 .product {
   border: 1px solid var(--color-border-gray);
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--font-secondary);
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -529,14 +542,10 @@ input {
 /* services styles */
 
 .services {
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--font-secondary);
   font-size: 13px;
   line-height: 24px;
   background-color: var(--color-basic-bg);
-}
-
-.services__desc {
-  margin: 0;
 }
 
 .services__switches {
@@ -548,19 +557,7 @@ input {
   margin: 0;
 }
 
-.service__desc {
-  margin: 0;
-}
-
 /* company styles */
-
-.company__desc,
-.contacts__desc {
-  margin: 0;
-  font-family: "PT Sans", sans-serif;
-  font-size: 13px;
-  line-height: 24px;
-}
 
 .company__list {
   list-style: none;
@@ -673,7 +670,7 @@ input {
 .contact-form__textarea {
   border: 2px solid var(--color-basic-lightgray);
   border-radius: 2px;
-  font-family: "PT Sans", sans-serif;
+  font-family: var(--font-secondary);
 }
 
 .contact-form__textarea {
