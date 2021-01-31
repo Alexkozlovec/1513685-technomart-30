@@ -28,10 +28,10 @@
               <a href="#" class="user-nav__link user-nav__link--bookmarks">Закладки: <span>0</span></a>
             </li>
             <li class="user-nav__item">
-              <a href="#" class="user-nav__link user-nav__link--cart">Корзина: <span>0</span></a>
+              <a href="#" class="user-nav__link user-nav__link--cart user-nav__link--has-items">Корзина: <span>10</span></a>
             </li>
             <li class="user-nav__item">
-              <a href="#" class="user-nav__link">Оформить заказ</a>
+              <a href="#" class="user-nav__link user-nav__link--order">Оформить заказ</a>
             </li>
           </ul>
         </div>
@@ -50,7 +50,12 @@
         </ul>
 
         <div class="profile">
-          <a class="profile__link" href="#">Равшан Джамшутович</a>
+          <div class="profile__top">
+            <a class="profile__name" href="#">Равшан Джамшутович</a>
+            <a class="profile__logout" href="#">
+              <span class="visually-hidden">Выйти из аккаунта</span>
+            </a>
+          </div>
           <ul class="profile__nav">
             <li class="profile__item">
               <a class="profile__link" href="#">Мои заказы</a>
@@ -107,23 +112,25 @@
         </li>
       </ul>
 
-      <section>
-        <header class="section-header">
+      <section class="catalog">
+        <header class="section-header catalog__header">
           <h1 class="section-title section-title--blue">Перфораторы</h1>
         </header>
 
         <section class="filter">
-          <h2 class="filter__title">Фильтр:</h2>
+          <header class="section-topline">
+            <h2 class="filter__title">Фильтр:</h2>
+          </header>
 
           <form class="filters-form" method="GET" action="https://echo.htmlacademy.ru">
             <fieldset class="filters-form__fieldset">
               <legend class="filters-form__legend">Цена:</legend>
               <input type="range" name="price" id="price" min="0" max="30000">
               <label for="price-from">От</label>
-              <input type="text" name="price-from" id="price-from" value="0">
+              <input class="filters-form__text-input" type="text" name="price-from" id="price-from" value="0">
               <span>—</span>
               <label for="price-to">До</label>
-              <input type="text" name="price-to" id="price-to" value="30000">
+              <input class="filters-form__text-input" type="text" name="price-to" id="price-to" value="30000">
             </fieldset>
 
             <fieldset class="filters-form__fieldset">
@@ -171,14 +178,14 @@
         </section>
 
         <section class="catalog">
-          <h2 class="visually-hidden">Каталог товаров</h2>
+          <h2 class="section-title visually-hidden">Каталог товаров</h2>
 
-          <div class="sort">
+          <div class="section-topline sort">
             <p class="sort__lead">Сортировка:</p>
 
             <ul class="sort__list">
               <li class="sort__item">
-                <button class="sort__category">По цене</button>
+                <button class="sort__category sort__category--current">По цене</button>
               </li>
               <li class="sort__item">
                 <button class="sort__category">По типу</button>
@@ -189,7 +196,7 @@
             </ul>
 
             <div class="sort__controls">
-              <button class="sort__control sort__control--up">
+              <button class="sort__control sort__control--current sort__control--up">
                 <span class="visually-hidden">Сортировать по возрастанию</span>
               </button>
               <button class="sort__control sort__control--down">
@@ -209,7 +216,7 @@
                   </div>
                 </div>
                 <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
-                <s class="product__price--prev">30500 Р.</s>
+                <s class="product__price-prev">30500 Р.</s>
                 <a class="product__price" href="#">25500 Р.</a>
               </article>
             </li>
@@ -223,7 +230,7 @@
                   </div>
                 </div>
                 <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
-                <s class="product__price--prev">30500 Р.</s>
+                <s class="product__price-prev">30500 Р.</s>
                 <a class="product__price" href="#">25500 Р.</a>
               </article>
             </li>
@@ -238,7 +245,7 @@
                   </div>
                 </div>
                 <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
-                <s class="product__price--prev">30500 Р.</s>
+                <s class="product__price-prev">30500 Р.</s>
                 <a class="product__price" href="#">25500 Р.</a>
               </article>
             </li>
@@ -253,7 +260,7 @@
                   </div>
                 </div>
                 <h3 class="product__title">Перфоратор BOSCH BFG 3000</h3>
-                <s class="product__price--prev">22500 Р.</s>
+                <s class="product__price-prev">22500 Р.</s>
                 <a class="product__price" href="#">15500 Р.</a>
               </article>
             </li>
@@ -267,7 +274,7 @@
                   </div>
                 </div>
                 <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
-                <s class="product__price--prev">30500 Р.</s>
+                <s class="product__price-prev">30500 Р.</s>
                 <a class="product__price" href="#">25500 Р.</a>
               </article>
             </li>
@@ -296,7 +303,7 @@
                   </div>
                 </div>
                 <h3 class="product__title">Перфоратор BOSCH BFG 3000</h3>
-                <s class="product__price--prev">22500 Р.</s>
+                <s class="product__price-prev">22500 Р.</s>
                 <a class="product__price" href="#">15500 Р.</a>
               </article>
             </li>
@@ -310,7 +317,7 @@
                   </div>
                 </div>
                 <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
-                <s class="product__price--prev">30500 Р.</s>
+                <s class="product__price-prev">30500 Р.</s>
                 <a class="product__price" href="#">25500 Р.</a>
               </article>
             </li>
@@ -332,7 +339,7 @@
 
           <ul class="pagination">
             <li class="pagination__item">
-              <a class="btn btn--pagination" href="#">1</a>
+              <a class="btn btn--pagination btn--pagination-current" href="#">1</a>
             </li>
             <li class="pagination__item">
               <a class="btn btn--pagination" href="#">2</a>
@@ -448,7 +455,7 @@
       <p class="modal-cart__lead">Товар добавлен в корзину!</p>
       <ul class="modal-cart__actions">
         <li class="modal-cart__action">
-          <button class="btn btn--order" type="button">Оформить заказ</button>
+          <button class="btn btn--primary btn--order" type="button">Оформить заказ</button>
         </li>
         <li class="modal-cart__action">
           <button class="btn btn--resume" type="button">Продолжить покупки</button>
