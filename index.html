@@ -18,7 +18,7 @@
             <img class="logo__image" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
           </a>
 
-          <form class="search-form" method="GET" action="https://echo.htmlacademy.ru">
+          <form class="search-form main-header__search-form" method="GET" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="search-form__input" type="text" name="search" id="search" placeholder="Поиск:">
           </form>
@@ -83,7 +83,7 @@
     </header>
 
     <main class="page-main">
-      <section class="categories">
+      <section class="categories container">
         <h2 class="section-title visually-hidden">Ассортимент</h2>
         <ul class="categories__list">
           <li class="categories__item categories__item--materials">
@@ -100,7 +100,7 @@
             <a class="btn btn--category" href="#">Для стройки</a>
           </li>
 
-          <li class="slider">
+          <li class="slider categories__slider">
             <ul class="slider__slides">
               <li class="slider__slide slider__slide--current">
                 <header class="slide__header">
@@ -162,7 +162,7 @@
         </ul>
       </section>
 
-      <section class="popular-products">
+      <section class="popular-products container">
         <header class="section-header">
           <h2 class="section-title section-title--blue">Популярные товары:</h2>
           <a class="btn btn--primary btn--popular" href="#">Все популярные товары</a>
@@ -230,7 +230,7 @@
         </ul>
       </section>
 
-      <section class="popular-brands">
+      <section class="popular-brands container">
         <header class="section-header">
           <h2 class="section-title section-title--blue">Популярные производители:</h2>
           <a class="btn btn--primary btn--popular" href="#">Все производители</a>
@@ -281,7 +281,7 @@
       </section>
 
       <section class="services">
-        <div class="container">
+        <div class="container services__container">
           <div class="services__info">
             <h2 class="section-title services__title">Сервисы</h2>
             <p class="section-desc services__desc">
@@ -303,7 +303,7 @@
             </li>
           </ul>
 
-          <div class="services__tab">
+          <div class="services__tab services__tab--current">
             <h3 class="section-title section-title--blue service__title">Доставка</h3>
             <p class="section-desc service__desc">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду
@@ -332,9 +332,9 @@
         </div>
       </section>
 
-      <div>
+      <div class="index-about container">
         <section class="company">
-          <h2 class="section-title">Компания «Техномарт»</h2>
+          <h2 class="section-title company__title">Компания «Техномарт»</h2>
           <p class="section-desc company__desc">
             Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров
             для ремонта и строительства не оставит равнодушными любителей
