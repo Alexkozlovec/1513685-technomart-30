@@ -51,7 +51,7 @@
 
         <div class="login">
           <a class="login__link login__link--login" href="#">Войти</a>
-          <a class="login__link" href="#">Регистрация</a>
+          <a class="login__link login__link--sign" href="#">Регистрация</a>
         </div>
       </div>
 
@@ -231,7 +231,7 @@
       </section>
 
       <section class="popular-brands container">
-        <header class="section-header">
+        <header class="section-header popular-brands__header">
           <h2 class="section-title section-title--blue">Популярные производители:</h2>
           <a class="btn btn--primary btn--popular" href="#">Все производители</a>
         </header>
@@ -444,7 +444,7 @@
           </p>
 
           <p class="footer-credits">
-            Разработано —<br>
+            Разработано –<br>
             <a class="footer-link" href="https://htmlacademy.ru">htmlacademy.ru</a>
           </p>
         </div>
@@ -452,18 +452,18 @@
     </footer>
 
     <section class="modal modal-contact">
-      <h2 class="modal-contact__title">Форма обратной связи</h2>
+      <h2 class="modal-contact__title visually-hidden">Форма обратной связи</h2>
       <button class="modal__close" type="button">Закрыть</button>
 
       <form class="contact-form" method="POST" action="https://echo.htmlacademy.ru">
         <ul class="contact-form__fields">
           <li class="contact-form__field">
             <label class="contact-form__label" for="name">Ваше имя:</label>
-            <input class="field contact-form__input" type="text" name="name" id="name" placeholder="Имя Фамилия" required>
+            <input class="contact-form__input" type="text" name="name" id="name" placeholder="Имя Фамилия" required>
           </li>
           <li class="contact-form__field">
             <label class="contact-form__label" for="email">Ваш e-mail:</label>
-            <input class="field contact-form__input" type="email" name="email" id="email" placeholder="email@example.com" required>
+            <input class="contact-form__input" type="email" name="email" id="email" placeholder="email@example.com" required>
           </li>
           <li class="contact-form__field">
             <label class="contact-form__label" for="message">Текст письма:</label>
