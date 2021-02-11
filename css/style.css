@@ -229,17 +229,17 @@ input {
 
 .marker-new {
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
   z-index: 5;
-  font-family: var(--font-primary);
   display: inline-block;
-  text-align: center;
+  padding: 7px 0 4px;
   width: 100px;
   height: 30px;
-  padding: 7px 0 4px;
+  font-family: var(--font-primary);
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
   color: var(--color-text-secondary);
   background-color: var(--color-basic-red);
@@ -276,9 +276,9 @@ input {
 }
 
 .section-topline {
-  height: 38px;
   border-radius: 2px;
   padding: 10px 14px 10px 18px;
+  height: 38px;
   font-family: var(--font-secondary);
   font-size: 13px;
   line-height: 18px;
@@ -338,12 +338,12 @@ input {
 .btn--buy {
   --color-box-shadow: var(--color-basic-green-extra-dark);
 
-  min-width: 135px;
+  margin-bottom: 10px;
   border-radius: 2px;
+  min-width: 135px;
   box-shadow: inset 0 -3px 0 var(--color-box-shadow);
   color: var(--color-text-secondary);
   background-color: var(--color-basic-green);
-  margin-bottom: 10px;
 }
 
 .btn--buy:hover {
@@ -355,9 +355,9 @@ input {
 }
 
 .btn--bookmarks {
-  min-width: 135px;
   border: 2px solid var(--color-basic-green);
   border-radius: 2px;
+  min-width: 135px;
   color: var(--color-text-dark);
   background-color: transparent;
 }
@@ -423,17 +423,17 @@ input {
 }
 
 .btn--filters {
-  width: 100%;
   border: 1px solid var(--color-border-gray-darker);
+  width: 100%;
   font-family: var(--font-secondary);
   background-color: var(--color-white);
 }
 
 .btn--pagination {
   display: block;
-  padding: 10px 15px;
   border: 1px solid var(--color-border-gray-darker);
   border-radius: 2px;
+  padding: 10px 15px;
   min-width: 38px;
   font: inherit;
   font-size: 13px;
@@ -642,9 +642,9 @@ input {
 }
 
 .profile__top {
+  padding: 14px;
   min-width: 300px;
   min-height: 45px;
-  padding: 14px;
   text-align: center;
   background-color: var(--color-white);
 }
@@ -766,9 +766,9 @@ input {
 }
 
 .categories__item {
-  overflow: hidden;
   position: relative;
   align-self: start;
+  overflow: hidden;
   padding: 20px 0 21px 22px;
   width: 300px;
   height: 123px;
@@ -856,9 +856,9 @@ input {
 
 .product {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   border: 1px solid var(--color-border-gray);
   padding: 5px 17px 20px;
   width: 220px;
@@ -872,7 +872,7 @@ input {
   background-color: var(--color-white);
 }
 
-.product:hover .product__actions{
+.product:hover .product__actions {
   display: block;
 }
 
@@ -891,13 +891,13 @@ input {
 }
 
 .product__actions {
-  display: none;
-  height: inherit;
   position: absolute;
-  top: 0;
   left: 0;
-  width: 100%;
+  top: 0;
+  display: none;
   padding-top: 38px;
+  width: 100%;
+  height: inherit;
   background-color: var(--color-white);
 }
 
@@ -914,12 +914,12 @@ input {
 }
 
 .product__price {
-  text-align: left;
   margin: auto auto 0 27px;
-  padding: 9px 0 10px 33px;
   border-radius: 2px;
+  padding: 9px 0 10px 33px;
   height: 38px;
   min-width: 141px;
+  text-align: left;
   color: var(--color-text-secondary);
   background-color: var(--color-basic-red);
 }
@@ -1174,18 +1174,18 @@ input {
 
 .footer-socials {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   list-style: none;
-  width: 134px;
   margin: 0;
   padding: 0;
+  width: 134px;
 }
 
 .footer-socials__item {
+  padding: 1px;
   width: 44px;
   height: 44px;
-  padding: 1px;
 }
 
 .footer-socials__link {
@@ -1363,14 +1363,14 @@ input {
 .filters-form__fieldset {
   margin: 0;
   border: none;
+  border-bottom: 1px solid var(--color-border-gray-darker);
   padding: 0;
   padding-bottom: 25px;
-  border-bottom: 1px solid var(--color-border-gray-darker);
 }
 
-.filters-form__fieldset:last-of-type{
-  padding-bottom: 34px;
+.filters-form__fieldset:last-of-type {
   border-bottom: none;
+  padding-bottom: 34px;
 }
 
 .filters-form__fields {
@@ -1383,25 +1383,25 @@ input {
   padding: 2px 0;
 }
 
-.filters-form__field:not(:last-child){
+.filters-form__field:not(:last-child) {
   margin-bottom: 17px;
 }
 
 .filters-form__legend {
+  padding-top: 17px;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
-  padding-top: 17px;
 }
 
 .filters-form__legend--price {
-  padding-top: 13px;
   margin-bottom: 12px;
+  padding-top: 13px;
 }
 
 .filters-form__legend--brands {
-  padding-top: 16px;
   margin-bottom: 17px;
+  padding-top: 16px;
 }
 
 .filters-form__legend--power {
@@ -1410,10 +1410,10 @@ input {
 
 .filters-form__range-input {
   display: block;
-  width: 180px;
   margin: 0 auto;
-  min-height: 80px;
   margin-bottom: 9px;
+  width: 180px;
+  min-height: 80px;
 }
 
 .filters-form__text-inputs {
@@ -1423,15 +1423,15 @@ input {
 }
 
 .filters-form__text-input {
-  text-align: center;
-  padding: 10px;
-  max-width: 95px;
-  height: 38px;
   border: none;
   border-radius: 2px;
+  padding: 10px;
+  height: 38px;
+  max-width: 95px;
   font: inherit;
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
   background-color: var(--color-section-topline-bg);
 }
 
@@ -1459,12 +1459,12 @@ input {
   display: flex;
   list-style: none;
   margin: 0;
-  margin-left: auto;
   margin-right: 46px;
+  margin-left: auto;
   padding: 0;
 }
 
-.sort__item:not(:last-child){
+.sort__item:not(:last-child) {
   margin-right: 66px;
 }
 
@@ -1500,7 +1500,7 @@ input {
   cursor: pointer;
 }
 
-.sort__control:not(:last-child){
+.sort__control:not(:last-child) {
   margin-right: 21px;
 }
 
@@ -1541,4 +1541,3 @@ input {
 .about__title {
   margin-bottom: 25px;
 }
-
