@@ -124,17 +124,19 @@
 
           <form class="filters-form" method="GET" action="https://echo.htmlacademy.ru">
             <fieldset class="filters-form__fieldset">
-              <legend class="filters-form__legend">Цена:</legend>
-              <input type="range" name="price" id="price" min="0" max="30000">
-              <label for="price-from">От</label>
-              <input class="filters-form__text-input" type="text" name="price-from" id="price-from" value="0">
-              <span>—</span>
-              <label for="price-to">До</label>
-              <input class="filters-form__text-input" type="text" name="price-to" id="price-to" value="30000">
+              <legend class="filters-form__legend filters-form__legend--price">Цена:</legend>
+              <input class="filters-form__range-input" type="range" name="price" id="price" min="0" max="30000">
+              <div class="filters-form__text-inputs">
+                <label for="price-from" class="visually-hidden">От</label>
+                <input class="filters-form__text-input" type="text" name="price-from" id="price-from" value="0">
+                <span>—</span>
+                <label for="price-to" class="visually-hidden">До</label>
+                <input class="filters-form__text-input" type="text" name="price-to" id="price-to" value="30000">
+              </div>
             </fieldset>
 
             <fieldset class="filters-form__fieldset">
-              <legend class="filters-form__legend">Производители:</legend>
+              <legend class="filters-form__legend filters-form__legend--brands">Производители:</legend>
               <ul class="filters-form__fields">
                 <li class="filters-form__field">
                   <input class="visually-hidden" type="checkbox" name="brand" id="bosch" checked>
@@ -160,7 +162,7 @@
             </fieldset>
 
             <fieldset class="filters-form__fieldset">
-              <legend class="filters-form__legend">Питание:</legend>
+              <legend class="filters-form__legend filters-form__legend--power">Питание:</legend>
               <ul class="filters-form__fields">
                 <li class="filters-form__field">
                   <input class="visually-hidden" type="radio" name="power" id="accumulator" checked>
