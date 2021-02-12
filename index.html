@@ -20,7 +20,11 @@
 
           <form class="search-form main-header__search-form" method="GET" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
-            <input class="search-form__input" type="text" name="search" id="search" placeholder="Поиск:">
+            <input class="search-form__input" type="text" name="search" id="search" autocomplete="off" placeholder="Поиск:">
+            <svg class="search-form__icon" width="17" height="17" viewbox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" />
+            </svg>
           </form>
 
           <ul class="user-nav">
@@ -50,7 +54,15 @@
         </ul>
 
         <div class="login">
-          <a class="login__link login__link--login" href="#">Войти</a>
+          <a class="login__link login__link--login" href="#">
+            <svg class="login-icon login-icon--login" width="20" height="18" viewbox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="login-icon__path" d="M14.1667 9L5.71429 0.5V6.5H0V11.5H5.71429V17.5L14.1667 9Z" fill="#C5C5C5" />
+              <path class="login-icon__path"
+                d="M16.1771 15.51H11.3895V17.5H16.1771C18.2514 17.5 19.0381 15.69 19.0619 14.474V3.528C19.0381 2.311 18.2514 0.5 16.1771 0.5H11.3895V2.49H16.1771C16.9762 2.49 17.1219 3.171 17.1391 3.547V14.451C17.1229 14.827 16.9762 15.51 16.1771 15.51Z"
+                fill="#C5C5C5" />
+            </svg>
+            Войти
+          </a>
           <a class="login__link login__link--sign" href="#">Регистрация</a>
         </div>
       </div>
@@ -131,20 +143,20 @@
             </ul>
 
             <button class="slider__control slider__control--prev" type="button">
-              <span>назад</span>
+              <span class="visually-hidden">назад</span>
             </button>
             <button class="slider__control slider__control--next" type="button">
-              <span>вперёд</span>
+              <span class="visually-hidden">вперёд</span>
             </button>
 
             <ul class="slider__pagination">
               <li class="slider__pagination-item">
-                <button class="slider__pagination-button slider__pagination-button--current" type="button">
+                <button class="slider__pagination-btn slider__pagination-btn--current" type="button">
                   <span class="visually-hidden">1 / 2</span>
                 </button>
               </li>
               <li class="slider__pagination-item">
-                <button class="slider__pagination-button" type="button">
+                <button class="slider__pagination-btn" type="button">
                   <span class="visually-hidden">2 / 2</span>
                 </button>
               </li>
@@ -303,7 +315,7 @@
             </li>
           </ul>
 
-          <div class="services__tab services__tab--current">
+          <div class="services__tab services__tab--shipping services__tab--current">
             <h3 class="section-title section-title--blue service__title">Доставка</h3>
             <p class="section-desc service__desc">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду
@@ -312,7 +324,7 @@
               поднимая его на ваш этаж!
             </p>
           </div>
-          <div class="services__tab">
+          <div class="services__tab services__tab--guarantee">
             <h3 class="section-title section-title--blue service__title">Гарантия</h3>
             <p class="section-desc service__desc">
               Если купленный у нас товар поломается или заискрит, а также в
@@ -321,7 +333,7 @@
               товар на новый.<br>Дом уж восстановите как-нибудь сами.
             </p>
           </div>
-          <div class="services__tab">
+          <div class="services__tab services__tab--credit">
             <h3 class="section-title section-title--blue service__title">Кредит</h3>
             <p class="section-desc service__desc">
               Залезть в долговую яму стало проще!<br>
@@ -422,17 +434,17 @@
 
           <ul class="footer-socials">
             <li class="footer-socials__item">
-              <a class="footer-socials__link" href="#">
+              <a class="footer-socials__link footer-socials__link--vk" href="#">
                 <span class="visually-hidden">Ссылка на нашу страницу вконтакте</span>
               </a>
             </li>
             <li class="footer-socials__item">
-              <a class="footer-socials__link" href="#">
+              <a class="footer-socials__link footer-socials__link--fb" href="#">
                 <span class="visually-hidden">Ссылка на нашу страницу в фейсбуке</span>
               </a>
             </li>
             <li class="footer-socials__item">
-              <a class="footer-socials__link" href="#">
+              <a class="footer-socials__link footer-socials__link--inst" href="#">
                 <span class="visually-hidden">Ссылка на наш профиль в инстаграм</span>
               </a>
             </li>
