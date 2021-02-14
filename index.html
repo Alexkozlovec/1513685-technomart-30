@@ -465,7 +465,9 @@
 
     <section class="modal modal-contact">
       <h2 class="modal-contact__title visually-hidden">Форма обратной связи</h2>
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
 
       <form class="contact-form" method="POST" action="https://echo.htmlacademy.ru">
         <ul class="contact-form__fields">
@@ -479,7 +481,7 @@
           </li>
           <li class="contact-form__field">
             <label class="contact-form__label" for="message">Текст письма:</label>
-            <textarea class="contact-form__textarea" name="message" id="message" placeholder="В произвольной форме" required></textarea>
+            <textarea class="contact-form__textarea" name="message" id="message" placeholder="В свободной форме" required></textarea>
           </li>
         </ul>
 
@@ -489,8 +491,17 @@
       </form>
     </section>
 
+    <div class="modal modal-map">
+      <button class="modal__close">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <!-- тут будет разметка карты -->
+    </div>
+
     <div class="modal modal-cart">
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
       <p class="modal-cart__lead">Товар добавлен в корзину!</p>
       <ul class="modal-cart__actions">
         <li class="modal-cart__action">
