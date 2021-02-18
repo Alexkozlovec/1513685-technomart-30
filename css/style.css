@@ -401,7 +401,6 @@ input {
 
 .btn-tabs {
   display: block;
-  margin-bottom: 1px;
   padding: 14px 22px 17px;
   width: 100%;
   box-shadow: 0 1px 0 var(--color-basic-blue-dark), inset 0 1px 0 #405069;
@@ -432,7 +431,6 @@ input {
 }
 
 .btn--contacts {
-  margin-top: auto;
   width: 100%;
 }
 
@@ -511,6 +509,7 @@ input {
 
 .main-header__top .container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .search-form {
@@ -518,7 +517,7 @@ input {
 }
 
 .main-header__search-form {
-  width: 271px;
+  width: 270px;
   height: 42px;
 }
 
@@ -561,6 +560,7 @@ input {
 
 .user-nav {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   margin-left: auto;
@@ -574,10 +574,10 @@ input {
 .user-nav__link {
   position: relative;
   display: block;
+  padding: 0 10px;
   height: 100%;
   min-width: 150px;
   line-height: 42px;
-  text-align: center;
   color: inherit;
 }
 
@@ -586,14 +586,15 @@ input {
 }
 
 .user-nav__link--bookmarks {
-  padding-left: 19px;
+  padding-left: 43px;
 }
 
 .user-nav__link--cart {
-  padding-left: 26px;
+  padding-left: 49px;
 }
 
 .user-nav__link--order {
+  text-align: center;
   background-color: var(--color-basic-green);
 }
 
@@ -645,6 +646,7 @@ input {
 
 .main-header__middle {
   display: flex;
+  flex-wrap: wrap;
   padding: 42px 0 40px 30px;
 }
 
@@ -670,8 +672,9 @@ input {
   margin-bottom: 3px;
   border: 3px solid var(--color-white);
   padding-left: 29px;
-  min-width: 270px;
+  width: 270px;
   min-height: 45px;
+  max-width: 270px;
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
@@ -684,6 +687,7 @@ input {
 
 .main-header__address {
   padding-left: 10px;
+  max-width: 270px;
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
@@ -702,7 +706,7 @@ input {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  padding: 0 10px;
   min-width: 120px;
   min-height: 45px;
   color: inherit;
@@ -723,10 +727,11 @@ input {
 }
 
 .login__link--login {
-  padding-left: 18px;
+  padding-left: 44px;
 }
 
 .login__link--sign {
+  justify-content: center;
   min-width: 150px;
 }
 
@@ -842,6 +847,7 @@ input {
 
 .main-nav__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
   margin: 0;
@@ -855,7 +861,7 @@ input {
 
 .main-nav__link {
   display: block;
-  padding: 16px 0 20px;
+  padding: 16px 28px 20px;
   height: 100%;
   color: inherit;
 }
@@ -876,6 +882,7 @@ input {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 20px 0;
   font-family: var(--font-secondary);
@@ -940,9 +947,10 @@ input {
   position: relative;
   align-self: start;
   overflow: hidden;
-  padding: 20px 0 21px 22px;
+  padding: 20px 22px 21px;
   width: 300px;
-  height: 123px;
+  height: 100%;
+  min-height: 123px;
   background-position: 191px 50%;
   background-repeat: no-repeat;
 }
@@ -980,6 +988,7 @@ input {
 .category__title {
   margin: 0;
   margin-bottom: 14px;
+  max-width: 150px;
   font-size: 24px;
   line-height: 30px;
 }
@@ -1038,6 +1047,7 @@ input {
 
 .slide__image {
   display: block;
+  object-fit: contain;
 }
 
 .slider__control {
@@ -1148,6 +1158,7 @@ input {
 
 .product__image {
   vertical-align: middle;
+  object-fit: contain;
 }
 
 .product__actions {
@@ -1176,9 +1187,10 @@ input {
 .product__price {
   margin: auto auto 0 27px;
   border-radius: 2px;
-  padding: 9px 0 10px 33px;
-  height: 38px;
+  padding: 10px 33px;
   min-width: 141px;
+  min-height: 38px;
+  max-width: 100%;
   text-align: left;
   color: var(--color-text-secondary);
   background:
@@ -1221,6 +1233,10 @@ input {
   height: 100%;
 }
 
+.popular-brand__image {
+  object-fit: contain;
+}
+
 .popular-brands__item:hover {
   --color-box-shadow: var(--color-shadow-primary);
 
@@ -1250,6 +1266,7 @@ input {
 .services__tab {
   display: none;
   grid-column: 2 / -1;
+  padding-bottom: 50px;
   min-height: 283px;
   background-position: 100% 20px;
   background-repeat: no-repeat;
@@ -1286,6 +1303,7 @@ input {
   margin: 0;
   padding: 0;
   padding-top: 3px;
+  padding-bottom: 50px;
   width: 240px;
 }
 
@@ -1301,11 +1319,16 @@ input {
   opacity: 0.25;
 }
 
+.services__switch:not(:last-child) {
+  margin-bottom: 1px;
+}
+
 .service__title {
   margin: 0;
   margin-bottom: 30px;
 }
 
+.service__title,
 .service__desc {
   max-width: 330px;
 }
@@ -1394,7 +1417,7 @@ input {
   display: grid;
   grid-template-columns: auto 1fr;
   padding-bottom: 54px;
-  row-gap: 22px;
+  gap: 22px;
 }
 
 .main-footer__logo {
@@ -1404,6 +1427,7 @@ input {
 .footer-nav,
 .footer-categories {
   display: flex;
+  flex-wrap: wrap;
   justify-self: end;
   grid-column: 2 / -1;
   list-style: none;
@@ -1464,6 +1488,8 @@ input {
 
 .main-footer__bottom .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-copy {
@@ -1475,6 +1501,7 @@ input {
 
 .footer-socials {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   list-style: none;
@@ -1931,6 +1958,7 @@ input {
 
 .sort {
   display: flex;
+  padding-right: 4px;
   padding-left: 19px;
 }
 
@@ -1942,9 +1970,8 @@ input {
   display: flex;
   list-style: none;
   margin: 0;
-  margin-right: 46px;
+  margin-right: 37px;
   margin-left: auto;
-  padding: 0;
 }
 
 .sort__item:not(:last-child) {
@@ -1964,22 +1991,26 @@ input {
   cursor: pointer;
 }
 
-.sort__category:hover {
-  --color-text: var(--color-text-primary);
-
-  border-bottom: 1px solid var(--color-basic-red);
-}
-
-.sort__category--current,
-.sort__category--current:hover {
+.sort__category--current {
   --color-text: var(--color-text-accent);
 
   border-bottom: none;
 }
 
+.sort__category:not(.sort__category--current):hover {
+  --color-text: var(--color-text-primary);
+
+  border-bottom: 1px solid var(--color-basic-red);
+}
+
+.sort__controls {
+  margin-top: -10px;
+}
+
 .sort__control {
   border: none;
-  padding: 0;
+  padding: 0 10px;
+  height: 38px;
   background-color: transparent;
   cursor: pointer;
 }
@@ -1990,10 +2021,6 @@ input {
 
 .sort__control:not(.sort__control--current):hover .sort__control-icon {
   fill: var(--color-black);
-}
-
-.sort__control:not(:last-child) {
-  margin-right: 20px;
 }
 
 .sort__control-icon {
