@@ -695,8 +695,12 @@ input {
 }
 
 .login {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   margin-left: auto;
   padding-top: 4px;
+  max-width: 280px;
   font-size: 21px;
   line-height: 1;
   color: var(--color-text-primary);
@@ -722,8 +726,8 @@ input {
   left: 19px;
 }
 
-.login__link:not(:last-child) {
-  margin-right: 5px;
+.login__link:not(:nth-child(2n)) {
+  margin-right: 10px;
 }
 
 .login__link--login {
@@ -800,10 +804,12 @@ input {
 
 .profile__nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 280px;
 }
 
 .profile__item:not(:last-child) {
@@ -1574,9 +1580,17 @@ input {
 /* modals styles */
 
 .modal {
-  position: relative; /* Временно */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
   display: none;
   border-top: 7px solid var(--color-basic-red);
+  transform: translate(-50%, -50%);
+}
+
+.modal--active {
+  display: block;
 }
 
 .modal__close {
@@ -1602,6 +1616,7 @@ input {
   min-height: 430px;
   box-shadow: 0 4px 20px var(--color-box-shadow);
   background-color: var(--color-white);
+  animation: fadeIn 300ms forwards;
 }
 
 .contact-form__fields {
@@ -1663,12 +1678,15 @@ input {
   box-shadow: 0 20px 40px var(--color-box-shadow);
   text-align: center;
   background-color: var(--color-white);
+  animation: fadeIn 300ms forwards;
 }
 
 .modal-cart__lead {
-  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin: 0;
-  padding: 66px 0;
+  padding: 48px 20px 49px 81px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -1676,9 +1694,8 @@ input {
 
 .modal-cart__lead::before {
   content: "";
-  position: absolute;
-  left: 80px;
-  top: 48px;
+  display: block;
+  margin-right: 30px;
   width: 66px;
   height: 66px;
   background-image: url("../img/icons/icon-mark.svg");
@@ -1703,6 +1720,18 @@ input {
   width: 940px;
   height: 447px;
   box-shadow: 0 4px 20px var(--color-shadow-primary);
+  background-color: var(--color-white);
+  animation: fadeIn 300ms forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* catalog styles */
@@ -1958,6 +1987,7 @@ input {
 
 .sort {
   display: flex;
+  flex-wrap: wrap;
   padding-right: 4px;
   padding-left: 19px;
 }
@@ -2044,6 +2074,7 @@ input {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
