@@ -21,7 +21,7 @@
           <form class="search-form main-header__search-form" method="GET" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="search-form__input" type="text" name="search" id="search" autocomplete="off" placeholder="Поиск:">
-            <svg class="search-form__icon" width="17" height="17" viewbox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+            <svg class="search-form__icon" width="17" height="17" viewbox="0 0 17 17" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" />
             </svg>
@@ -55,7 +55,7 @@
 
         <div class="login">
           <a class="login__link login__link--login" href="#">
-            <svg class="login-icon login-icon--login" width="20" height="18" viewbox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="login-icon login-icon--login" width="20" height="18" viewbox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path class="login-icon__path" d="M14.1667 9L5.71429 0.5V6.5H0V11.5H5.71429V17.5L14.1667 9Z" fill="#C5C5C5" />
               <path class="login-icon__path"
                 d="M16.1771 15.51H11.3895V17.5H16.1771C18.2514 17.5 19.0381 15.69 19.0619 14.474V3.528C19.0381 2.311 18.2514 0.5 16.1771 0.5H11.3895V2.49H16.1771C16.9762 2.49 17.1219 3.171 17.1391 3.547V14.451C17.1229 14.827 16.9762 15.51 16.1771 15.51Z"
@@ -95,6 +95,7 @@
     </header>
 
     <main class="page-main">
+      <h1 class="visually-hidden">Главная страница интернет-магазина «Техномарт»</h1>
       <section class="categories container">
         <h2 class="section-title visually-hidden">Ассортимент</h2>
         <ul class="categories__list">
@@ -149,15 +150,15 @@
               <span class="visually-hidden">вперёд</span>
             </button>
 
-            <ul class="slider__pagination">
+            <ul class="slider__pagination" aria-label="Пагинация слайдера">
               <li class="slider__pagination-item">
                 <button class="slider__pagination-btn slider__pagination-btn--current" type="button">
-                  <span class="visually-hidden">1 / 2</span>
+                  <span class="visually-hidden">Слайд 1 / 2</span>
                 </button>
               </li>
               <li class="slider__pagination-item">
                 <button class="slider__pagination-btn" type="button">
-                  <span class="visually-hidden">2 / 2</span>
+                  <span class="visually-hidden">Слайд 2 / 2</span>
                 </button>
               </li>
             </ul>
@@ -165,11 +166,11 @@
 
           <li class="categories__item categories__item--sales">
             <h3 class="category__title">Скидки 50%</h3>
-            <a class="btn btn--category" href="#">На 350 товаров</a>
+            <a class="btn btn--category" href="#" aria-label="Показать 350 товаров со скидкой 50%">На 350 товаров</a>
           </li>
           <li class="categories__item categories__item--shipping">
             <h3 class="category__title">Доставка</h3>
-            <a class="btn btn--category" href="#">Бесплатно</a>
+            <a class="btn btn--category" href="#" aria-label="Товары с бесплатной доставкой">Бесплатно</a>
           </li>
         </ul>
       </section>
@@ -185,14 +186,14 @@
             <article class="product">
               <div class="product__preview">
                 <img class="product__image" src="img/products/bosch-bfg-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
-                <div class="product__actions">
-                  <button class="btn btn--buy" type="button">Купить</button>
-                  <button class="btn btn--bookmarks" type="button">В закладки</button>
-                </div>
               </div>
               <h3 class="product__title">Перфоратор BOSCH BFG 9000</h3>
-              <s class="product__price-prev">32500 Р.</s>
-              <a class="product__price" href="#">25500 Р.</a>
+              <s class="product__price-prev" aria-label="Прежняя цена 32500 Р.">32500 Р.</s>
+              <a class="product__price" href="#" aria-label="Цена со скидкой 25500 Р. Перейти на страницу товара">25500 Р.</a>
+              <div class="product__actions">
+                <button class="btn btn--buy" type="button" aria-label="Добавить перфоратор BOSCH BFG 9000 в корзину">Купить</button>
+                <button class="btn btn--bookmarks" type="button">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="popular-products__item">
@@ -200,28 +201,28 @@
               <div class="product__preview">
                 <img class="product__image" src="img/products/bosch-bfg-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                 <span class="marker-new">New</span>
-                <div class="product__actions">
-                  <button class="btn btn--buy" type="button">Купить</button>
-                  <button class="btn btn--bookmarks" type="button">В закладки</button>
-                </div>
               </div>
               <h3 class="product__title">Перфоратор BOSCH BFG 3000</h3>
-              <s class="product__price-prev">22500 Р.</s>
-              <a class="product__price" href="#">15500 Р.</a>
+              <s class="product__price-prev" aria-label="Прежняя цена 22500 Р.">22500 Р.</s>
+              <a class="product__price" href="#" aria-label="Цена со скидкой 15500 Р. Перейти на страницу товара">15500 Р.</a>
+              <div class="product__actions">
+                <button class="btn btn--buy" type="button" aria-label="Добавить перфоратор BOSCH BFG 3000 в корзину">Купить</button>
+                <button class="btn btn--bookmarks" type="button">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="popular-products__item">
             <article class="product">
               <div class="product__preview">
                 <img class="product__image" src="img/products/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-                <div class="product__actions">
-                  <button class="btn btn--buy" type="button">Купить</button>
-                  <button class="btn btn--bookmarks" type="button">В закладки</button>
-                </div>
               </div>
               <h3 class="product__title">Перфоратор BOSCH BFG 6000</h3>
-              <s class="product__price-prev">30500 Р.</s>
-              <a class="product__price" href="#">25500 Р.</a>
+              <s class="product__price-prev" aria-label="Прежняя цена 30500 Р.">30500 Р.</s>
+              <a class="product__price" href="#" aria-label="Цена со скидкой 25500 Р. Перейти на страницу товара">25500 Р.</a>
+              <div class="product__actions">
+                <button class="btn btn--buy" type="button" aria-label="Добавить перфоратор BOSCH BFG 6000 в корзину">Купить</button>
+                <button class="btn btn--bookmarks" type="button">В закладки</button>
+              </div>
             </article>
           </li>
           <li class="popular-products__item">
@@ -229,14 +230,14 @@
               <div class="product__preview">
                 <img class="product__image" src="img/products/bosch-bfg-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                 <span class="marker-new">New</span>
-                <div class="product__actions">
-                  <button class="btn btn--buy" type="button">Купить</button>
-                  <button class="btn btn--bookmarks" type="button">В закладки</button>
-                </div>
               </div>
               <h3 class="product__title">Перфоратор BOSCH BFG 2000</h3>
-              <s class="product__price-prev">22500 Р.</s>
-              <a class="product__price" href="#">12500 Р.</a>
+              <s class="product__price-prev" aria-label="Прежняя цена 22500 Р.">22500 Р.</s>
+              <a class="product__price" href="#" aria-label="Цена со скидкой 12500 Р. Перейти на страницу товара">12500 Р.</a>
+              <div class="product__actions">
+                <button class="btn btn--buy" type="button" aria-label="Добавить перфоратор BOSCH BFG 2000 в корзину">Купить</button>
+                <button class="btn btn--bookmarks" type="button">В закладки</button>
+              </div>
             </article>
           </li>
         </ul>
@@ -250,42 +251,42 @@
 
         <ul class="popular-brands__list">
           <li class="popular-brands__item">
-            <a class="popular-brand__link" href="#">
+            <a class="popular-brand__link" href="#" aria-label="Показать товары производителя Bosch">
               <img class="popular-brand__image" src="img/partners/bosch.jpg" width="126" height="37" alt="BOSCH">
             </a>
           </li>
           <li class="popular-brands__item">
-            <a class="popular-brand__link" href="#">
+            <a class="popular-brand__link" href="#" aria-label="Показать товары производителя Makita">
               <img class="popular-brand__image" src="img/partners/Makita.jpg" width="123" height="40" alt="Makita">
             </a>
           </li>
           <li class="popular-brands__item">
-            <a class="popular-brand__link" href="#">
+            <a class="popular-brand__link" href="#" aria-label="Показать товары производителя DeWalt">
               <img class="popular-brand__image" src="img/partners/dewalt.jpg" width="146" height="44" alt="DeWalt">
             </a>
           </li>
           <li class="popular-brands__item">
-            <a class="popular-brand__link" href="#">
+            <a class="popular-brand__link" href="#" aria-label="Показать товары производителя Интерскол">
               <img class="popular-brand__image" src="img/partners/interscol.jpg" width="200" height="76" alt="Интерскол">
             </a>
           </li>
           <li class="popular-brands__item">
-            <a class="popular-brand__link" href="#">
+            <a class="popular-brand__link" href="#" aria-label="Показать товары производителя Hitachi">
               <img class="popular-brand__image" src="img/partners/hitachi.jpg" width="169" height="31" alt="Нitachi">
             </a>
           </li>
           <li class="popular-brands__item">
-            <a class="popular-brand__link" href="#">
+            <a class="popular-brand__link" href="#" aria-label="Показать товары производителя Lg">
               <img class="popular-brand__image" src="img/partners/lg.jpg" width="121" height="73" alt="Lg">
             </a>
           </li>
           <li class="popular-brands__item">
-            <a class="popular-brand__link" href="#">
+            <a class="popular-brand__link" href="#" aria-label="Показать товары производителя AEG">
               <img class="popular-brand__image" src="img/partners/aeg.jpg" width="151" height="96" alt="AEG">
             </a>
           </li>
           <li class="popular-brands__item">
-            <a class="popular-brand__link" href="#">
+            <a class="popular-brand__link" href="#" aria-label="Показать товары производителя Metabo">
               <img class="popular-brand__image" src="img/partners/metabo.jpg" width="204" height="69" alt="Metabo">
             </a>
           </li>
@@ -305,13 +306,13 @@
 
           <ul class="services__switches">
             <li class="services__switch">
-              <button class="btn btn-tabs btn-tabs--current" type="button">Доставка</button>
+              <button class="btn btn-tabs btn-tabs--current" type="button" aria-label="Показать информацию о доставке">Доставка</button>
             </li>
             <li class="services__switch">
-              <button class="btn btn-tabs" type="button">Гарантия</button>
+              <button class="btn btn-tabs" type="button" aria-label="Показать информацию о гарантии">Гарантия</button>
             </li>
             <li class="services__switch">
-              <button class="btn btn-tabs" type="button">Кредит</button>
+              <button class="btn btn-tabs" type="button" aria-label="Показать информацию о кредите">Кредит</button>
             </li>
           </ul>
 
@@ -358,15 +359,15 @@
             Техномарт работает со многими транспортными компаниями:
           </p>
 
-          <ul class="company__list">
+          <ul class="company__list" aria-label="Наши партнеры в логистике">
             <li class="company__item">
-              <a class="company__link" href="#">Деловые линии</a>
+              <a class="company__link" href="#" target="_blank" aria-label="Открыть сайт компании «Деловые линии»">Деловые линии</a>
             </li>
             <li class="company__item">
-              <a class="company__link" href="#">Автотрейдинг</a>
+              <a class="company__link" href="#" target="_blank" aria-label="Открыть сайт компании «Автотрейдинг»">Автотрейдинг</a>
             </li>
             <li class="company__item">
-              <a class="company__link" href="#">ЖелДорЭкспедиция</a>
+              <a class="company__link" href="#" target="_blank" aria-label="Открыть сайт компании «ЖелДорЭкспедиция»">ЖелДорЭкспедиция</a>
             </li>
           </ul>
           <a class="btn btn--primary btn--company" href="#">Подробнее о компании</a>
@@ -375,10 +376,10 @@
         <section class="contacts">
           <h2 class="section-title contacts__title">Контакты</h2>
           <p class="section-desc contacts__desc">Вы можете забрать товар сами, заехав в наш офис:</p>
-          <div class="map-preview">
+          <a href="#" class="map-preview" aria-label="Открыть интерактивную карту">
             <img class="map-preview__image" src="img/map-placeholder.jpg" width="300" height="158" alt="Наш офис на карте по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-          </div>
-          <button class="btn btn--primary btn--contacts" type="button">Заблудились? Напишите нам</button>
+          </a>
+          <button class="btn btn--primary btn--contacts" type="button" aria-label="Открыть форму обратной связи">Заблудились? Напишите нам</button>
         </section>
       </div>
     </main>
@@ -434,18 +435,18 @@
 
           <ul class="footer-socials">
             <li class="footer-socials__item">
-              <a class="footer-socials__link footer-socials__link--vk" href="#">
-                <span class="visually-hidden">Ссылка на нашу страницу вконтакте</span>
+              <a class="footer-socials__link footer-socials__link--vk" href="#" target="_blank">
+                <span class="visually-hidden">Перейти на нашу страницу вконтакте</span>
               </a>
             </li>
             <li class="footer-socials__item">
-              <a class="footer-socials__link footer-socials__link--fb" href="#">
-                <span class="visually-hidden">Ссылка на нашу страницу в фейсбуке</span>
+              <a class="footer-socials__link footer-socials__link--fb" href="#" target="_blank">
+                <span class="visually-hidden">Перейти на нашу страницу в фейсбуке</span>
               </a>
             </li>
             <li class="footer-socials__item">
-              <a class="footer-socials__link footer-socials__link--inst" href="#">
-                <span class="visually-hidden">Ссылка на наш профиль в инстаграм</span>
+              <a class="footer-socials__link footer-socials__link--inst" href="#" target="_blank">
+                <span class="visually-hidden">Перейти на наш профиль в инстаграм</span>
               </a>
             </li>
           </ul>
@@ -457,7 +458,7 @@
 
           <p class="footer-credits">
             Разработано –<br>
-            <a class="footer-link" href="https://htmlacademy.ru">htmlacademy.ru</a>
+            <a class="footer-link" href="https://htmlacademy.ru" target="_blank">htmlacademy.ru</a>
           </p>
         </div>
       </div>
@@ -510,7 +511,7 @@
       <p class="modal-cart__lead">Товар добавлен в корзину!</p>
       <ul class="modal-cart__actions">
         <li class="modal-cart__action">
-          <button class="btn btn--primary btn--order" type="button">Оформить заказ</button>
+          <a href="#" class="btn btn--primary btn--order">Оформить заказ</a>
         </li>
         <li class="modal-cart__action">
           <button class="btn btn--resume" type="button">Продолжить покупки</button>
