@@ -1151,7 +1151,7 @@ input {
 }
 
 .product:hover .product__actions,
-.product:focus-within .product__actions{
+.product:focus-within .product__actions {
   display: block;
 }
 
