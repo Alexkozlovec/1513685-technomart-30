@@ -491,6 +491,7 @@ input {
 }
 
 .btn--order {
+  display: block;
   min-width: 192px;
 }
 
@@ -1582,17 +1583,28 @@ input {
 /* modals styles */
 
 .modal {
+  --width: 620px;
+  --height: 430px;
+
   position: fixed;
   left: 50%;
   top: 50%;
   z-index: 100;
   display: none;
+  margin-top: calc(var(--height) / 2 * -1);
+  margin-left: calc(var(--width) / 2 * -1);
   border-top: 7px solid var(--color-basic-red);
-  transform: translate(-50%, -50%);
+  width: var(--width);
+  min-height: var(--height);
 }
 
 .modal--active {
   display: block;
+  animation: bounce 600ms;
+}
+
+.modal--error {
+  animation: shake 600ms;
 }
 
 .modal__close {
@@ -1604,6 +1616,7 @@ input {
   height: 21px;
   background-image: url("../img/icons/icon-close.svg");
   background-color: transparent;
+  cursor: pointer;
 }
 
 .modal-contact .modal__close {
@@ -1614,11 +1627,8 @@ input {
   --color-box-shadow: var(--color-shadow-primary);
 
   padding-top: 40px;
-  width: 620px;
-  min-height: 430px;
   box-shadow: 0 4px 20px var(--color-box-shadow);
   background-color: var(--color-white);
-  animation: fadeIn 300ms forwards;
 }
 
 .contact-form__fields {
@@ -1674,13 +1684,11 @@ input {
 
 .modal-cart {
   --color-box-shadow: rgba(41, 52, 73, 0.75);
+  --height: 282px;
 
-  width: 620px;
-  min-height: 282px;
   box-shadow: 0 20px 40px var(--color-box-shadow);
   text-align: center;
   background-color: var(--color-white);
-  animation: fadeIn 300ms forwards;
 }
 
 .modal-cart__lead {
@@ -1719,20 +1727,54 @@ input {
 }
 
 .modal-map {
-  width: 940px;
-  height: 447px;
+  --width: 940px;
+  --height: 447px;
+
   box-shadow: 0 4px 20px var(--color-shadow-primary);
   background-color: var(--color-white);
-  animation: fadeIn 300ms forwards;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+.modal-map iframe {
+  border: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
   }
 
-  to {
-    opacity: 1;
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
