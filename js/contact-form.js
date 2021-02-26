@@ -50,7 +50,8 @@ const handleSubmit = (evt) => {
   }
 }
 
-openContactModalBtn.addEventListener("click", () => {
+openContactModalBtn.addEventListener("click", (evt) => {
+  evt.preventDefault();
   showModal(contactModal);
   setValuesFromLocalStorage();
   setFocus();

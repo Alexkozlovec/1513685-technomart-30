@@ -2,4 +2,4 @@ import{showModal,showError,removeError}from "./global.js";const contactModal=doc
 const setValuesFromLocalStorage=()=>{if(nameFromStorage)fieldName.value=nameFromStorage;if(mailFromStorage)fieldMail.value=mailFromStorage}
 const setFocus=()=>{const firstEmpty=allInputs.find((el)=>!el.value);firstEmpty?firstEmpty.focus():fieldMessage.focus()}
 const handleSubmit=(evt)=>{if(!fieldName.value||!fieldMail.value||!fieldMessage.value){evt.preventDefault();removeError(contactModal);void contactModal.offsetWidth;showError(contactModal)}else{localStorage.setItem("name",fieldName.value);localStorage.setItem("email",fieldMail.value)}}
-openContactModalBtn.addEventListener("click",()=>{showModal(contactModal);setValuesFromLocalStorage();setFocus()});contactForm.addEventListener("submit",handleSubmit)
+openContactModalBtn.addEventListener("click",(evt)=>{evt.preventDefault();showModal(contactModal);setValuesFromLocalStorage();setFocus()});contactForm.addEventListener("submit",handleSubmit)

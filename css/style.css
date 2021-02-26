@@ -237,7 +237,6 @@ input {
   right: 0;
   top: 0;
   z-index: 5;
-  display: inline-block;
   padding: 7px 0 4px;
   width: 100px;
   height: 30px;
@@ -358,7 +357,6 @@ input {
   position: absolute;
   left: 30px;
   top: 10px;
-  display: block;
   width: 15px;
   height: 15px;
   background-image: url("../img/icons/icon-cart.svg");
@@ -483,8 +481,7 @@ input {
   border-color: var(--color-basic-red);
 }
 
-.btn--pagination-current,
-.btn--pagination-current:hover {
+.btn--pagination-current {
   border-color: var(--color-basic-red);
   color: var(--color-text-secondary);
   background-color: var(--color-basic-red);
@@ -794,6 +791,7 @@ input {
 
 .profile__logout {
   display: inline-block;
+  vertical-align: middle;
   width: 20px;
   height: 17px;
   transform: translateY(3px);
@@ -1413,6 +1411,7 @@ input {
 
 .map-preview__image {
   display: block;
+  background-color: var(--color-basic-lightgray);
 }
 
 /* main-footer styles */
@@ -1968,6 +1967,11 @@ input {
 .filters-form__checkbox:focus + .filters-form__label::before,
 .filters-form__radio:focus + .filters-form__label::before {
   outline: 2px solid var(--color-basic-blue-dark);
+}
+
+.filters-form__checkbox:focus:not(:focus-visible) + .filters-form__label::before,
+.filters-form__radio:focus:not(:focus-visible) + .filters-form__label::before {
+  outline: none;
 }
 
 .filters-form__checkbox:disabled + .filters-form__label,
