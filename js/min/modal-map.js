@@ -1,1 +1,1 @@
-import{showModal}from "./global.js";const modalMap=document.querySelector(".modal-map");const modalMapTrigger=document.querySelector(".map-preview");modalMapTrigger.addEventListener("click",(evt)=>{evt.preventDefault();showModal(modalMap)})
+const modalMap=document.querySelector(".modal-map"),modalMapTrigger=document.querySelector(".map-preview");modalMapTrigger.addEventListener("click",e=>{e.preventDefault(),modalMap.classList.add("modal--active")});

@@ -1,40 +1,36 @@
 const modals = document.querySelectorAll(".modal");
 const modalCloseButtons = document.querySelectorAll(".modal__close");
-// modal cart
+// Модальное окно корзины
 const modalCart = document.querySelector(".modal-cart");
-// buttons
+// Кнопки добавления в корзину и закладки
 const addToCartBtns = document.querySelectorAll(".btn--buy");
 const addToBookmarksBtns = document.querySelectorAll(".btn--bookmarks");
-
+// Ссылки на корзину и закладки
 const linkCart = document.querySelector(".user-nav__link--cart");
 const linkBookmarks = document.querySelector(".user-nav__link--bookmarks");
 
-// activity classes
-const modalActiveClass = "modal--active";
-const modalErrorClass = "modal--error";
-const userLinkActiveClass = "user-nav__link--has-items";
+// Классы элементов, и их классы активности
+const CLASSES = {
+  button: "btn",
+  modal: "modal",
+  modalActive: "modal--active",
+  modalError: "modal--error",
+  userLinkNotEmpty: "user-nav__link--has-items"
+}
 
-export function closeModal(el) {
-  el.classList.remove(modalActiveClass);
-  el.classList.remove(modalErrorClass);
+const closeModal = (el) => {
+  el.classList.remove(CLASSES.modalActive);
+  el.classList.remove(CLASSES.modalError);
 };
 
-export function showModal(el) {
-  el.classList.add(modalActiveClass);
-};
-
-export function showError(el) {
-  el.classList.add(modalErrorClass);
-};
-
-export function removeError(el) {
-  el.classList.remove(modalErrorClass);
+const showModal = (el) => {
+  el.classList.add(CLASSES.modalActive);
 };
 
 window.addEventListener("keydown", ({keyCode}) => {
   if(keyCode === 27) {
     modals.forEach(modal => {
-      if(modal.classList.contains(modalActiveClass)) {
+      if(modal.classList.contains(CLASSES.modalActive)) {
         closeModal(modal);
       }
     });
@@ -43,7 +39,7 @@ window.addEventListener("keydown", ({keyCode}) => {
 
 modalCloseButtons.forEach(btn => {
   btn.addEventListener("click", () => {
-    closeModal(btn.closest(".modal"));
+    closeModal(btn.closest(`.${CLASSES.modal}`));
   });
 });
 
@@ -52,18 +48,18 @@ modalCloseButtons.forEach(btn => {
 addToCartBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     showModal(modalCart);
-    linkCart.classList.add(userLinkActiveClass);
+    linkCart.classList.add(CLASSES.userLinkNotEmpty);
   });
 });
 
 addToBookmarksBtns.forEach(btn => {
   btn.addEventListener("click", () => {
-    linkBookmarks.classList.add(userLinkActiveClass);
+    linkBookmarks.classList.add(CLASSES.userLinkNotEmpty);
   });
 });
 
 modalCart.addEventListener("click", ({target}) => {
-  if(target.classList.contains("btn")) {
+  if(target.classList.contains(CLASSES.button)) {
     closeModal(modalCart);
   };
 });

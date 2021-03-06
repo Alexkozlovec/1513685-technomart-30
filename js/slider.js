@@ -12,14 +12,14 @@
 */
 
 function initSlider(parent) {
-  // Elements
+  // Элементы слайдера
   const slider = document.querySelector(parent);
   const slides = Array.from(slider.querySelectorAll(".slider__slide"));
   const sliderControls = Array.from(slider.querySelectorAll(".slider__control"));
   const pagination = slider.querySelector(".slider__pagination");
   const paginationButtons = Array.from(pagination.querySelectorAll(".slider__pagination-btn"));
 
-  // Classes
+  // Классы
   const ACTIVITY_CLASSES = {
     slide: "slider__slide--current",
     btnPrev: "slider__control--prev",
@@ -27,11 +27,12 @@ function initSlider(parent) {
     btnPagination: "slider__pagination-btn--current",
   };
 
-  // Current and last slide indexes
+  // Индексы текущего и последнего слайдов
   let currentSlideIndex = 0;
   const lastSlideIndex = slides.length - 1;
 
   /**
+   * Переключает слайд согласно номеру нужного слайда.
    * @param {Array} elements
    * @param {String} activeClass
    */
@@ -49,6 +50,8 @@ function initSlider(parent) {
   };
 
   /**
+   * Переключает номер активного слайда в зависимости
+   * от класса нажатой кнопки.
    * @param {Event} param0
    */
   const handleControlBtnClick = ({ target }) => {
@@ -71,6 +74,7 @@ function initSlider(parent) {
   };
 
   /**
+   * Переключает слайд по клику на кнопку пагинации.
    * @param {Event} param0
    */
   const handlePaginationBtnClick = ({ target }) => {
