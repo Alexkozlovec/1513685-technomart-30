@@ -332,6 +332,7 @@ input {
   --color-bg: rgba(255, 255, 255, 0.3);
 
   display: inline-block;
+  vertical-align: middle;
   min-width: 135px;
   color: var(--color-text-secondary);
   background-color: var(--color-bg);
@@ -432,6 +433,7 @@ input {
 
 .btn--company {
   display: inline-block;
+  vertical-align: middle;
   margin-top: auto;
   min-width: 220px;
 }
@@ -442,10 +444,12 @@ input {
 
 .btn--service {
   display: inline-block;
+  vertical-align: middle;
   margin-top: 26px;
   border-radius: 2px;
   min-width: 195px;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .btn--submit {
@@ -1389,7 +1393,7 @@ input {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-  padding-top: 3px;
+  padding-top: 4px;
 }
 
 .company__item {
